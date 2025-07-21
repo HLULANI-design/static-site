@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    header, main, footer {
+      max-width: 800px;
+      margin: auto;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #005fcc;
+    }
+    nav a:focus {
+      outline: 2px solid #005fcc;
+      outline-offset: 2px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #005fcc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:focus {
+      outline: 2px solid #333;
+      outline-offset: 2px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Contact Me</h1>
+    <nav role="navigation" aria-label="Main menu">
+      <ul>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section id="form" aria-labelledby="form-heading">
+      <h2 id="form-heading">Send a Message</h2>
+      <form aria-labelledby="form-heading">
+        <fieldset>
+          <legend>Contact Form</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" aria-required="true" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" aria-required="true" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" aria-required="true" required></textarea>
+
+          <button type="submit" aria-label="Submit the contact form">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About My Work</h2>
+      <p>I am a professional Web Developer.</p>
+      <img src="./niceImage.jpg" alt="An image of a large body of water surrounded 
+      by some hills." width="400" height="250" />
+      <img src="./Another.jpg" alt="" role="presentation" width="400" height="20" />
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Hlulani Ndlovu. All rights reserved.</p>
+  </footer>
+</body>
+</html>
